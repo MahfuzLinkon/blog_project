@@ -9,6 +9,7 @@ class CategoryController extends Controller
 {
     private $categories;
     private $category;
+
     public function create(){
         return view('admin.category.create');
     }

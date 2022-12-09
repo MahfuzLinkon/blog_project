@@ -61,10 +61,10 @@
                 <div class="collapse" id="sidebarEmail">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="apps-email-inbox.html">Create Brand</a>
+                            <a href="{{ route('create.brand') }}">Create Brand</a>
                         </li>
                         <li>
-                            <a href="apps-email-read.html">Manage Brand</a>
+                            <a href="{{ route('manage.brand') }}">Manage Brand</a>
                         </li>
                     </ul>
                 </div>

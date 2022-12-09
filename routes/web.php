@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
 
 Route::get('/', [FrontendController::class, 'home'])->name('home');
 
@@ -13,11 +14,18 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-
+//    Category Route
     Route::get('/create-category', [CategoryController::class, 'create'])->name('create.category');
     Route::post('/store-category', [CategoryController::class, 'store'])->name('store.category');
     Route::get('/manage-category', [CategoryController::class, 'manage'])->name('manage.category');
     Route::get('/edit-category/{id}', [CategoryController::class, 'edit'])->name('edit.category');
     Route::post('/update-category/{id}', [CategoryController::class, 'update'])->name('update.category');
     Route::get('/delete-category/{id}', [CategoryController::class, 'delete'])->name('delete.category');
+//    Brand Route
+    Route::get('/create-brand', [BrandController::class, 'create'])->name('create.brand');
+    Route::post('/store-brand', [BrandController::class, 'store'])->name('store.brand');
+    Route::get('/manage-brand', [BrandController::class, 'manage'])->name('manage.brand');
+    Route::get('/edit-brand/{id}', [BrandController::class, 'edit'])->name('edit.brand');
+    Route::post('/update-brand/{id}', [BrandController::class, 'update'])->name('update.brand');
+    Route::get('/delete-brand/{id}', [BrandController::class, 'delete'])->name('delete.brand');
 });
