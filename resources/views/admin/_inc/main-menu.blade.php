@@ -79,10 +79,10 @@
                 <div class="collapse" id="sidebarProjects">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="apps-projects-list.html">Create Product</a>
+                            <a href="{{ route('create.product') }}">Create Product</a>
                         </li>
                         <li>
-                            <a href="apps-projects-details.html">Manage Product</a>
+                            <a href="{{ route('manage.product') }}">Manage Product</a>
                         </li>
                     </ul>
                 </div>
